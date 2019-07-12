@@ -38,7 +38,7 @@ def valid_proof(last_hash, proof):
 
     IE:  last_hash: ...999123456, new hash 123456888...
     """
-    last_proof = f"{last_hash}{proof}".encode()
+    last_proof = f"{last_hash}".encode()
     last_proof_hash = hashlib.sha256(last_proof).hexdigest()
 
     new_proof = f"{proof}".encode()
